@@ -10,7 +10,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 
    Web: https://www.baubl.io
    Contract: https://etherscan.io/address/0xcbd514651067342047cd21b4e4dd07cd1152d3fb
-   Twitter: @BaublToken (https://twitter.com/baubletoken)
+   Twitter: @BaublToken (https://twitter.com/baubltoken)
 
 */
 contract Baubl is ERC20, ERC20Burnable, Ownable {

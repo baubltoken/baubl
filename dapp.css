@@ -1,0 +1,627 @@
+/*
+ * ------------------------------------------------------------------------------------
+ * Project: baubl.io
+ *
+ * Copyright (C) 2023 Baubl.io Project
+ *
+ * This software is released under the MIT License.
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ * ------------------------------------------------------------------------------------
+*/
+
+:root {
+    --button-color: rgb(121, 130, 127);
+    --input-border-color: rgb(219, 219, 220);
+    --value-color: rgb(220, 245, 245);
+    --lead-color: rgb(254, 172, 86);
+  }
+
+body {
+    background-color: #a1adad;
+}
+
+#top-table {
+    position: relative;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%; /* makes the table width responsive */
+    max-width: 960px; /* sets a maximum width for the table */
+    height: 14vh;
+    max-height: 100%;
+}
+
+#top-table td {
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.left-cell {
+    width: 8%; /* percentage of parent width */
+    background-color: #a1adad;
+}
+
+.right-cell {
+    width: 92%; /* percentage of parent width */
+    background-color: #a1adad;
+}
+
+#header-logo {
+    position: absolute;
+    max-width: 26%;
+    height: auto;
+}
+#header-logo {
+    top: 10%;
+    left: 8.5%;
+}
+
+#header-image {
+    position: absolute;
+    max-width: 50%;
+    height: auto;
+}
+
+#header-image {
+    top: 40%;
+    left: 36%;
+}
+
+#custom-table td {
+    padding-bottom: 5px;
+}
+
+#custom-table {
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 960px;
+}
+
+#custom-table td {
+    border: none;
+    vertical-align: top;
+}
+
+.white-cell {
+    width: 8%;
+    background-color: #79827f;
+}
+
+.gray-cell {
+    width: 92%;
+    background-color: #a1adad;
+}
+
+.version {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.available,
+.user,
+.balance {
+    margin-top: ch;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.unchained,
+.buy,
+.send,
+.support {
+    margin-top: 2ch;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#help {
+    padding-bottom: 6ch;
+    padding-top: 1ch;
+    margin-left: 40ch;
+    color: rgb(194, 211, 210);
+}
+#version-label {
+    padding-bottom: 6ch;
+    padding-top: 1ch;
+    margin-left: 26ch;
+    color: rgb(194, 211, 210);
+}
+
+#version-value {
+    margin-left: 1ch;
+    padding-top: 1ch;
+    padding-bottom: 7ch;
+    color: rgb(194, 211, 210);
+}
+
+#version-value {
+    color: rgb(194, 211, 210);
+    text-align: right;
+}
+
+
+#available-label {
+    margin-top: 1ch;
+    margin-left: 12ch;
+    margin-right: 1ch;
+    color: #2b2e2e;
+}
+
+#available-value {
+    margin-right: 1ch;
+    border: 1ch solid #2b2e2e;
+    background: #2b2e2e;
+    color: rgb(221, 219, 221);
+    text-align: left;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 20ch;
+}
+
+#available-total-label {
+    margin-top: 1ch;
+    margin-left: 10ch;
+    margin-right: 1ch;
+    color: #2b2e2e;
+}
+
+#available-total-value {
+    border: 1ch solid #2b2e2e;
+    background: #2b2e2e;
+    color: rgb(221, 219, 221);
+    text-align: left;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 20ch;
+}
+
+#user-label {
+    margin-left: 12ch;
+    margin-right: 2ch;
+    margin-top: 1ch;
+    color: #2b2e2e;
+}
+#user-value {
+    margin-left: 0.8ch;
+    border: 1ch solid #2b2e2e;
+    background: #2b2e2e;
+    color: rgb(221, 219, 221);
+    text-align: left;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 62.4ch;
+}
+
+#balance-label {
+    margin-left: 29ch;
+    margin-right: 1ch;
+}
+#balance-value {
+    margin-right: 1ch;
+    border: 1ch;
+    color: rgb(220, 245, 245);
+    text-align: left;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#balance-ether-label {
+    margin-left: 3ch;
+}
+#balance-and-label {
+    margin-left: 5ch;
+}
+#balance-baubl-value {
+    margin-left: 1ch;
+    color: rgb(220, 245, 245);
+    text-align: right;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 20ch;
+}
+#balance-baubl-label {
+    margin-left: 2ch;
+    text-align: left;
+}
+
+#functions-label {
+    padding-top: 1ch;
+    padding-bottom: 0ch;
+    margin-left: 3ch;
+    color: #2b2e2e;
+    font-size: 15.0pt;
+    font-stretch: ultra-condensed;
+    font-weight: 500;
+    font-family: 'Arial Narrow Bold', sans-serif;
+    text-align: left;
+}
+
+.unchained {
+    display: flex;
+}
+.unchained-lead {
+    margin-left: 8ch;
+    margin-right: 2ch;
+}
+.unchained-function {
+    display: flex;
+    flex-direction: column;
+}
+.unchained-seats {
+    display: flex;
+    align-items: center;
+}
+
+#unchained-lead-label {
+    margin-top: 1ch;
+    width: 2ch;
+    height: 8.1ch;
+    background: var(--lead-color);
+}
+#unchained-function-label {
+    margin-top: 1ch;
+    margin-left: 1ch;
+    width: 40ch;
+    color:  white;
+    font-weight: normal;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#unchained-function-button {
+    margin-left: 1ch;
+    margin-top: 1ch;
+    width: 22ch;
+    border: 1ch solid var(--button-color);
+    color: #d3ebeb;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: left;
+    background:  var(--button-color);
+}
+#unchained-seats-label {
+    margin-left: 2.4ch;
+    margin-top: 4ch;
+    width: 15ch;
+    color: #2b2e2e;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#unchained-seats-value {
+    margin-left: 1ch;
+    margin-top: 4ch;
+    border: 1ch solid #2b2e2e;
+    background: #2b2e2e;
+    color: rgb(221, 219, 221);;
+    text-align: left;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 20ch;
+    text-align: left;
+}
+
+.buy {
+    display: flex;
+}
+.buy-function {
+    display: flex;
+    flex-direction: column;
+}
+.buy-lead {
+    margin-left: 8ch;
+    width: 2ch;
+    height: 7ch;
+    background: var(--lead-color);
+    text-align: left;
+}
+#buy-lead-label {
+    margin-top: 1ch;
+    width: 2ch;
+    height: 18.5ch;
+    background: var(--lead-color);
+}
+#buy-function-label {
+    margin-left: 3ch;
+    color:  white;
+    font-weight: normal;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#buy-function-input {
+    margin-left: 3ch;
+    margin-top: 1ch;
+    width: 45ch;
+    height: 2ch;
+    border-left: 1.5ch solid var(--input-border-color);
+    border-right: 1.5ch solid var(--input-border-color);
+    border-bottom: 3.5ch solid var(--input-border-color);
+    border-top: 3.5ch solid var(--input-border-color);
+    text-align: left;
+    padding-left: 1ch;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background:  white;
+}
+#buy-function-button {
+    margin-left: 3ch;
+    width: 22ch;
+    border: 1ch solid var(--button-color);
+    text-align: left;
+    color: #d3ebeb;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background:  var(--button-color);
+}
+
+.send {
+    display: flex;
+}
+.send-functions {
+    display: flex;
+    flex-direction: column;
+}
+.send-lead {
+    margin-left: 8ch;
+    width: 2ch;
+    background: var(--lead-color);
+    text-align: left;
+}
+#send-lead-label {
+    margin-left: 8ch;
+    background: var(--lead-color);
+    text-align: left;
+}
+#send-functions-label {
+    margin-left: 3ch;
+    color:  white;
+    font-weight: normal;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#send-functions-choice-label {
+    margin-left: 3ch;
+    margin-top: 1ch;
+    color:  white;
+    font-stretch: normal;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#send-functions-address-input {
+    margin-left: 3ch;
+    margin-top: 1ch;
+    width: 45ch;
+    height: 2ch;
+    border-left: 1.5ch solid var(--input-border-color);
+    border-right: 1.5ch solid var(--input-border-color);
+    border-bottom: 3.5ch solid var(--input-border-color);
+    border-top: 3.5ch solid var(--input-border-color);
+    text-align: left;
+    padding-left: 1ch;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background:  white;
+}
+
+#send-functions-amount-input {
+    margin-left: 0.8ch;
+    width: 25ch;
+    height: 2ch;
+    border-left: 1.5ch solid var(--input-border-color);
+    border-right: 1.5ch solid var(--input-border-color);
+    border-bottom: 3.5ch solid var(--input-border-color);
+    border-top: 3.5ch solid var(--input-border-color);
+    text-align: left;
+    padding-left: 1ch;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background:  white;
+}
+#send-functions-have-button {
+    margin-left: 3ch;
+    margin-top: 1ch;
+    width: 22ch;
+    border: 1ch solid var(--button-color);
+    text-align: left;
+    color: #d3ebeb;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background:  var(--button-color);
+}
+#send-functions-giveaway-button {
+    margin-left: 2ch;
+    margin-top: 1ch;
+    width: 22ch;
+    border: 1ch solid var(--button-color);
+    text-align: left;
+    color: #d3ebeb;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background:  var(--button-color);
+}
+
+.support {
+    display: flex;
+}
+.pre-sale,
+.donate {
+    display: flex;
+    flex-direction: column;
+}
+#support-label {
+    padding-top: 2ch;
+    padding-bottom: 1ch;
+    margin-left: 3ch;
+    color: #2b2e2e;
+    font-size: 15.0pt;
+    font-stretch: ultra-condensed;
+    font-weight: 500;
+    font-family: 'Arial Narrow Bold', sans-serif;
+    text-align: left;
+}
+.pre-sale-lead {
+    margin-left: 8ch;
+    width: 1ch;
+    text-align: left;
+}
+#pre-sale-lead-label {
+    margin-left: 0ch;
+    width: 2ch;
+    height: 22ch;
+    background: var(--lead-color);
+    text-align: left;
+}
+#pre-sale-label {
+    margin-left: 4ch;
+    margin-bottom: 1ch;
+    color: white;
+    font-weight: normal;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#pre-sale-function-label {
+    margin-left: 4ch;
+    color:  white;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#pre-sale-function-buy-input {
+    margin-left: 4ch;
+    width: 45ch;
+    height: 2ch;
+    border-left: 1.5ch solid var(--input-border-color);
+    border-right: 1.5ch solid var(--input-border-color);
+    border-bottom: 3.5ch solid var(--input-border-color);
+    border-top: 3.5ch solid var(--input-border-color);
+    text-align: left;
+    padding-left: 1ch;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background:  white;
+}
+#pre-sale-function-buy-button {
+    margin-left: 4ch;
+    width: 22ch;
+    border: 1ch solid var(--button-color);
+    text-align: left;
+    color: #d3ebeb;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background:  var(--button-color);
+}
+
+#donate-label {
+    margin-left: 2ch;
+    margin-bottom: 1ch;
+    color: white;
+    font-weight: normal;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#donate-function-label {
+    margin-left: 2ch;
+    color:  white;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#donate-function-input {
+    margin-left: 2ch;
+    width: 25ch;
+    height: 2ch;
+    border-left: 1.5ch solid var(--input-border-color);
+    border-right: 1.5ch solid var(--input-border-color);
+    border-bottom: 3.5ch solid var(--input-border-color);
+    border-top: 3.5ch solid var(--input-border-color);
+    text-align: left;
+    padding-left: 5px;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background:  white;
+}
+#donate-function-button {
+    margin-left: 2ch;
+    width: 22ch;
+    border: 1ch solid var(--button-color);
+    text-align: left;
+    color: #d3ebeb;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background:  var(--button-color);
+}
+
+.support-info div {
+    display: inline-block;
+}
+#support-info-label {
+    margin-left: 14ch;
+    margin-top: 3ch;
+    margin-bottom: 2ch;
+    color:  white;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#owner-address {
+    color:  rgb(204, 233, 204);
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.line {
+    margin-left: 10ch;
+    margin-top: 2ch;
+    height: 2px;
+    width: 84ch;;
+    background-color:  var(--lead-color);
+}
+#status-label {
+    margin-left: 7ch;
+    margin-bottom: 1ch;
+    margin-top: 1.5ch;
+    color:  #d1e5e5;
+    font-size: 13.0pt;
+    font-stretch: ultra-condensed;
+    font-weight: 900;
+    font-family: 'Arial Narrow Bold', sans-serif;
+}
+#status-value {
+    margin-left: 12ch;
+    margin-right: 11ch;
+    border: 1ch solid #2b2e2e;
+    background: #2b2e2e;
+    color: rgb(220, 245, 245);
+    text-align: left;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 79.5ch;
+}
+#status-info {
+    margin-left: 69ch;
+    margin-top: 1ch;
+    margin-bottom: 2ch;
+    color:  #2b2e2e;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+

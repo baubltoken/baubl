@@ -1,0 +1,204 @@
+<!--
+ * ------------------------------------------------------------------------------------
+ * Project: baubl.io
+ *
+ * Copyright (C) 2023 Baubl.io Project
+ *
+ * This software is released under the MIT License.
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ * ------------------------------------------------------------------------------------
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>B.A.U.B.L</title>
+    <link rel="stylesheet" type="text/css" href="dapp.css">
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@3.0.0/dist/web3.min.js"></script>
+    <script src="dapp.js" defer></script>
+</head>
+<body>
+    <table id="top-table">
+        <tr class="top-row0">
+            <td class="left-cell">
+                <img src="IMGs/h3v1.png" alt="Header Logo" id="header-logo"/>
+            </td>
+            <td class="right-cell">
+                <img src="IMGs/BAUBL_header.png" alt="Header image" id="header-image"/>
+            </td>
+        </tr>
+    </table>
+    <table id="custom-table">
+        <tr class="row1">
+            <td class="white-cell"></td>
+            <td class="gray-cell">
+                <div class=version>
+                    <a id="help" href="https://www.baubl.io/faq">Help / FAQ</a>
+                    <div id="version-label">dApp VERSION</div>
+                    <div id="version-value">0.010</div>
+                </div>
+            </td>
+        </tr>
+        <tr class="row2">
+            <td class="white-cell"></td>
+            <td class="gray-cell">
+                <div class=available>
+                    <div id="available-label">BAUBL AVAILABLE</div>
+                    <div id="available-value">10500000000</div>
+                    <div id="available-total-label">OF TOTAL</div>
+                    <div id="available-total-value">11000000000</div>
+                </div>
+            </td>
+        </tr>
+        <tr class="row3">
+            <td class="white-cell"></td>
+            <td class="gray-cell">
+                <div class=user>
+                    <div id="user-label">CURRENT USER</div>
+                    <div id="user-value">0x000000000</div>
+                </div>
+            </td>
+        </tr>
+        <tr class="row4">
+            <td class="white-cell"></td>
+            <td class="gray-cell">
+                <div class=balance>
+                    <div id="balance-label">HAS</div>
+                    <div id="balance-value">0.0000000000</div>
+                    <div id="balance-ether-label">ETHER</div>
+                    <div id="balance-and-label">AND</div>
+                    <div id="balance-baubl-value">000000</div>
+                    <div id="balance-baubl-label">BAUBL</div>
+                </div>
+            </td>
+        </tr>
+        <tr class="row5">
+            <td class="white-cell"></td>
+            <td class="gray-cell"></td>
+        </tr>
+        <tr class="row6">
+            <td class="white-cell"></td>
+            <td class="gray-cell">
+                <div class=functions>
+                    <div id="functions-label">TOKEN FUNCTIONS</div>
+                </div>
+            </td>
+        </tr>
+        <tr class="row7">
+            <td class="white-cell"></td>
+            <td class="gray-cell">
+                <div class=unchained>
+                    <div class="unchained-lead">
+                        <div id="unchained-lead-label">&nbsp;</div>
+                    </div>
+                    <div class=unchained-function>
+                        <div id="unchained-function-label">CHOOSE TO CLAIM YOUR 10 000 BAUBL</div>
+                        <button id="unchained-function-button">&#x25B6; unchainedBaubl</button>
+                    </div>
+                    <div class=unchained-seats>
+                        <div id="unchained-seats-label">LEFT TO CLAIM</div>
+                        <div id="unchained-seats-value">4999 / 5000</div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr class="row8">
+            <td class="white-cell"></td>
+            <td class="gray-cell">
+                <div class=buy>
+                    <div class="buy-lead">
+                        <div id="buy-lead-label">&nbsp;</div>
+                    </div>
+                    <div class=buy-function>
+                        <div id="buy-function-label">BUY BAUBL</div>
+                        <input id="buy-function-input" placeholder="Amount Ether">&nbsp;</input>
+                        <button id="buy-function-button">&#x25B6; buyBaubl</button>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr class="row9">
+            <td class="white-cell"></td>
+            <td class="gray-cell">
+                <div class=send>
+                    <div class="send-lead">
+                        <div id="send-lead-label">&nbsp;</div>
+                    </div>
+                    <div class=send-functions>
+                        <div id="send-functions-label">SEND TO A FRIEND</div>
+                        <div class=send-functions-inputs>
+                            <input id="send-functions-address-input" placeholder="Friend Address">&nbsp;</input>
+                            <input id="send-functions-amount-input" placeholder="Amount Baubl">&nbsp;</input>
+                        </div>
+                        <div id="send-functions-choice-label">Choose a following function:</div>
+                        <div class=send-functions-buttons>
+                            <button id="send-functions-have-button">&#x25B6; haveABaubl</button>
+                            <button id="send-functions-giveaway-button">&#x25B6; giveawayABaubl</button>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr class="row10">
+            <td class="white-cell"></td>
+            <td class="gray-cell"></td>
+        </tr>
+        <tr class="row11">
+            <td class="white-cell"></td>
+            <td class="gray-cell">
+                <div class=functions>
+                    <div id="support-label">SUPPORT THE PROJECT</div>
+                </div>
+            </td>
+        </tr>
+        <tr class="row12">
+            <td class="white-cell"></td>
+            <td class="gray-cell">
+                <div class=support>
+                    <div class="pre-sale-lead">
+                        <div id="pre-sale-lead-label">&nbsp;</div>
+                    </div>
+                    <div class="pre-sale">
+                        <div id="pre-sale-label">PRE-SALE BUY</div>
+                        <div id="pre-sale-function-label">Fill in a sum between 0.5-10 ether</div>
+                        <input id="pre-sale-function-buy-input" placeholder="Amount Ether">&nbsp;</input>
+                        <button id="pre-sale-function-buy-button">&#x25B6; Buy with Ether</button>
+                    </div>
+                    <div class="donate">
+                        <div id="donate-label">DONATE TO PROJECT</div>
+                        <div id="donate-function-label">Fill in an amount less than 0.5 ether</div>
+                        <input id="donate-function-input" placeholder="Amount Ether">&nbsp;</input>
+                        <button id="donate-function-button">&#x25B6; Donate</button>
+                    </div>
+                </div>
+                <div class="support-info">
+                    <div id="support-info-label">The ether amount is sent to owner address:</div>
+                    <div id="owner-address">0x12345</div>
+                </div>
+            </td>
+        </tr>
+        <tr class="row13">
+            <td class="white-cell"></td>
+            <td class="gray-cell">
+                <div class="line"></div>
+                <div class="status">
+                    <div id="status-label">STATUS</div>
+                    <div id="status-value">- - -</div>
+                    <div id="status-info">CURRENT ACTION RESULT</div>
+                </div>
+                <div class="line"></div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
